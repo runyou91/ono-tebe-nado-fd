@@ -1,1 +1,385 @@
-/* место для вашего кода */
+/*Голова*/
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  align-items: center;
+  padding: 30px 40px;
+  background-color: #ffffff;
+}
+
+.header__menu {
+  justify-self: start;
+}
+
+.header__links-list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.header__links-list-item {
+  align-items: center;
+  list-style: circle;
+  margin-left: 15px;
+}
+
+.header__links-list-item_no-bullit {
+  align-items: center;
+  list-style: none;
+  margin-left: 0;
+}
+
+.header__link {
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  text-transform: lowercase;
+  text-decoration: underline;
+  color: #000;
+}
+
+.header__link:hover {
+  opacity: 0.6;
+}
+
+.header__link_active {
+  text-decoration: none;
+}
+
+.header__logo {
+  display: block;
+  justify-self: center;
+}
+
+.header__logo-image {
+  display: block;
+  width: 90px;
+  height: auto;
+}
+
+.header__address {
+  justify-self: end;
+  max-width: 240px;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 135%;
+  font-style: normal;
+  text-align: left;
+}
+
+.address__phone,
+.address__email {
+  text-decoration: underline;
+  color: inherit;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.address__text {
+  line-height: 1.3;
+}
+
+
+/*Обложка*/
+
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: #000000;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.aligned-text {
+  display: block;
+}
+
+.aligned-text_left {
+  text-align: left;
+}
+
+.aligned-text_center {
+  text-align: center;
+}
+
+.aligned-text_right {
+  text-align: right;
+}
+
+.letter-spacing-extended {
+  letter-spacing: 0.2em;
+}
+
+.cover {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: 760px;
+  padding: 120px 40px 40px;
+  background-color: #1a1a1a;
+  background-image: url(/images/cover.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cover__title {
+  position: relative;
+  z-index: 1;
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 115%;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.cover__description {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.cover__description-text {
+  margin: 0;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #ffffff;
+  word-spacing: 15px;
+}
+
+.bet-button {
+  padding: 12px 30px;
+  border: 1px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+  font-size: 22px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/*Лоты*/
+
+.lots {
+  margin-top: 100px;
+  padding: 80px 40px;
+  background-color: #ffffff;
+}
+
+.lots__heading {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.lots__card-list {
+  display: flex;
+  flex: auto;
+  gap: 30px;
+  margin: 0;
+  margin-bottom: 30px;
+  list-style: none;
+}
+
+.lots__card-list-item {
+  width: 334px;
+  min-height: 596px;
+}
+
+.card-link {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 30px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card_type_film {
+  background-image: url("../images/card-lot-01.jpg");
+}
+
+.card_type_book {
+  background-image: url("../images/card-lot-02.jpg");
+}
+
+.card_type_picture {
+  background-image: url("../images/card-lot-03.jpg");
+}
+
+.card__title,
+.card__text {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  color: #ffffff;
+}
+
+.card__title {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 120%;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.card__text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  color: #fff;
+}
+
+.lots__look-more-link {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 20px;
+  color: #000;
+}
+
+.lots__look-more-link:hover {
+  opacity: 0.6;
+}
+
+
+/*Об аукционе*/
+
+.about {
+  display: grid;
+  grid-template-columns: 320px 1fr; 
+  gap: 40px;
+  padding: 80px 40px;
+  background-color: #ffffff;
+  align-items: start;
+}
+
+.about__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 240px;
+  background-color: #000000;
+  border-radius: 50%;
+  margin: auto; 
+}
+
+.about__logo-image {
+  width: 60%;
+  height: auto;
+}
+
+.about__column_text {
+  display: grid;
+  gap: 40px;
+}
+
+.about__title {
+  margin-top: 80px; 
+  font-weight: 700;
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 60px;
+}
+
+.about__text-p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  color: #000;
+}
+
+
+
+/*Футер*/
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: start;
+  gap: 40px;
+  padding: 60px 40px;
+  background-color: #ffffff;
+}
+
+.footer__address {
+  justify-self: start;
+  text-align: left;
+}
+
+.footer__address-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 135%;
+  color: #000;
+}
+
+.footer__menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+}
+
+.footer__menu-link {
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  color: #000;
+}
+
+.footer__menu-link_active {
+  text-decoration: none;
+}
+
+.footer__menu-link:hover {
+  opacity: 0.6;
+}
+
+.footer__social-list {
+  display: flex;
+  justify-self: end;
+  gap: 20px;
+  list-style: none;
+}
+
+.footer__social-link {
+  display: block;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #000000;
+  border-radius: 100%;
+}
